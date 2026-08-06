@@ -1,0 +1,40 @@
+{
+  "name": "fastly-mpp-fanout-streaming-demo",
+  "version": "3.4.0",
+  "description": "MPP Tempo session metering delivered through Fastly Fanout and local Pushpin",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "prebuild": "node esbuild.config.js",
+    "build": "mkdir -p bin && js-compute-runtime --enable-aot --env STRIPE_SECRET_KEY,STRIPE_PROFILE_ID,STRIPE_PAYMENT_METHOD,STRIPE_PAYMENT_METHOD_TYPES,MPP_AMOUNT,MPP_CURRENCY,MPP_DESCRIPTION,MPP_STREAM_UNITS,MPP_SECRET_KEY,TEMPO_SERVER_PRIVATE_KEY,TEMPO_PAYER_PRIVATE_KEY,TEMPO_RPC_URL,TEMPO_CURRENCY,TEMPO_UNIT_AMOUNT,TEMPO_SUGGESTED_DEPOSIT,TEMPO_MAX_DEPOSIT,FANOUT_SERVICE_ID,FASTLY_API_TOKEN dist/index.js bin/main.wasm",
+    "start": "fastly compute serve",
+    "dev": "fastly compute serve",
+    "deploy": "fastly compute publish --accept-defaults",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "fastly",
+    "compute",
+    "mpp",
+    "streaming-payments",
+    "tempo",
+    "stripe",
+    "shared-payment-token",
+    "agentic-commerce",
+    "fanout",
+    "pushpin",
+    "kv-store"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@fastly/js-compute": "^3.42.1",
+    "mppx": "^0.8.6",
+    "viem": "^2.54.1",
+    "ox": "^0.14.29"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "esbuild": "^0.27.0",
+    "typescript": "^5.9.3"
+  }
+}

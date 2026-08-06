@@ -1,0 +1,38 @@
+manifest_version = 3
+name = "fastly-mpp-fanout-streaming-demo"
+description = "MPP Tempo sessions delivered through Fastly Fanout and local Pushpin."
+authors = ["shaun.flagg@gmail.com"]
+language = "javascript"
+
+[scripts]
+build = "npm run build"
+
+[local_server.pushpin]
+enable = true
+
+[local_server.backends]
+  [local_server.backends.self]
+  url = "http://127.0.0.1:7676/"
+  override_host = "127.0.0.1:7676"
+
+  [local_server.backends.fanout_publish]
+  url = "http://127.0.0.1:5561/"
+  override_host = "127.0.0.1:5561"
+
+  [local_server.backends.tempo_rpc]
+  url = "https://rpc.moderato.tempo.xyz/"
+  override_host = "rpc.moderato.tempo.xyz"
+  cert_host = "rpc.moderato.tempo.xyz"
+
+[local_server.kv_stores]
+tempo_sessions = { file = "local/tempo-sessions.json", format = "json" }
+
+[setup.backends]
+  [setup.backends.tempo_rpc]
+  address = "rpc.moderato.tempo.xyz"
+  description = "Tempo Moderato JSON-RPC endpoint."
+  port = 443
+
+[setup.kv_stores]
+  [setup.kv_stores.tempo_sessions]
+  description = "Tempo MPP payment-channel session state for the Fanout demo."
