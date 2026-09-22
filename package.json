@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@fastly/js-compute": "^3.46.0",
-    "@types/node": "^25.5.0",
+    "@types/node": "^26.6.2",
     "esbuild": "^0.28.2",
     "typescript": "^5.9.3"
   }
