@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   dependency-review:
-    runs-on: ubuntu-latest
+    runs-on: forge-amd64-small
     permissions:
       contents: read
     steps:
