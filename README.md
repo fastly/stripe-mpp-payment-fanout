@@ -2,6 +2,8 @@
 
 Fastly Compute demo for metered machine-payment streams using MPP.
 
+> **Support level:** Tier 2 Fastly open-source support. See [SUPPORT.md](SUPPORT.md).
+
 The repo now demonstrates two related flows:
 
 1. **Tempo native MPP session over Fanout**: opens one payment channel, meters finite unit requests through that channel, publishes each paid unit to Fanout, and settles when the session closes.
@@ -128,6 +130,8 @@ set +a
 
 npm install --registry=https://registry.npmjs.org/
 fastly compute build
+mkdir -p local
+test -f local/tempo-sessions.json || printf '{}\n' > local/tempo-sessions.json
 fastly compute serve
 ```
 
@@ -234,3 +238,11 @@ Stop the local server, remove `bin`, `dist`, and `pkg`, rebuild, and restart aft
 ## Fastly RPC compatibility
 
 The demo uses a custom EIP-1193 transport instead of viem's standard HTTP transport. This avoids passing an `AbortSignal` into Fastly `fetch`, which is not currently supported by the Fastly JavaScript runtime.
+
+## Security
+
+Report suspected vulnerabilities privately using the process in [SECURITY.md](SECURITY.md). Do not include secrets, private keys, tokens, or customer data in public issues.
+
+## License
+
+Licensed under the MIT License. See [LICENSE](LICENSE).
