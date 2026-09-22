@@ -12,6 +12,9 @@
     "deploy": "fastly compute publish --accept-defaults",
     "typecheck": "tsc --noEmit"
   },
+  "engines": {
+    "node": ">=20"
+  },
   "keywords": [
     "fastly",
     "compute",
@@ -25,16 +28,16 @@
     "pushpin",
     "kv-store"
   ],
-  "license": "Apache-2.0",
+  "license": "MIT",
   "dependencies": {
-    "@fastly/js-compute": "^3.42.1",
     "mppx": "^0.8.6",
     "viem": "^2.54.1",
     "ox": "^0.14.29"
   },
   "devDependencies": {
+    "@fastly/js-compute": "^3.46.0",
     "@types/node": "^25.5.0",
-    "esbuild": "^0.27.0",
+    "esbuild": "^0.28.2",
     "typescript": "^5.9.3"
   }
 }
