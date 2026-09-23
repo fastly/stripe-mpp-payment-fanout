@@ -32,7 +32,7 @@
   "dependencies": {
     "mppx": "^0.8.6",
     "viem": "^2.54.1",
-    "ox": "^0.14.29"
+    "ox": "^1.7.5"
   },
   "devDependencies": {
     "@fastly/js-compute": "^3.46.0",
