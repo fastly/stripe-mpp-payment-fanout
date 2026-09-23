@@ -28,7 +28,7 @@
     "pushpin",
     "kv-store"
   ],
-  "license": "Apache-2.0",
+  "license": "MIT",
   "dependencies": {
     "mppx": "^0.8.6",
     "viem": "^2.54.1",

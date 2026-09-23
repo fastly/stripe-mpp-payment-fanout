@@ -245,6 +245,6 @@ Report suspected vulnerabilities privately using the process in [SECURITY.md](SE
 
 ## License
 
-Licensed under the Apache License 2.0. See [LICENSE](LICENSE).
+Licensed under the MIT License. See [LICENSE](LICENSE).
 
 Project attribution is provided in [NOTICE](NOTICE). Third-party software licenses and notices are provided in [THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt).

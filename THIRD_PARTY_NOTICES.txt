@@ -1,6 +1,38 @@
-Third-Party Software Notices
+THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
 
-@fastly/js-compute
+This project incorporates or derives from the third-party software identified
+below. The applicable licenses and attribution notices are provided here.
+
+========================================================================
+1. @fastly/js-compute
+========================================================================
+
+Copyright 2020 Fastly, Inc.
+
+Licensed under the Apache License, Version 2.0, with LLVM exceptions. The
+complete license text and LLVM exceptions reproduced from the distributed
+package follow below.
+
+The distributed @fastly/js-compute package does not contain a separate NOTICE
+file.
+
+========================================================================
+2. cloudflare/mpp-proxy
+========================================================================
+
+This project contains software derived from cloudflare/mpp-proxy:
+https://github.com/cloudflare/mpp-proxy
+
+The incorporated portions were substantially modified by Fastly, Inc. in 2026
+for use with Fastly Compute and Fanout.
+
+cloudflare/mpp-proxy is licensed under the Apache License, Version 2.0. Its
+LICENSE contains the standard Apache License, Version 2.0, reproduced below.
+The upstream repository does not contain a separate NOTICE file.
+
+========================================================================
+APACHE LICENSE, VERSION 2.0, AND @fastly/js-compute LLVM EXCEPTIONS
+========================================================================
 
                                  Apache License
                            Version 2.0, January 2004
