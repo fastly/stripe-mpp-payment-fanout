@@ -30,7 +30,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "mppx": "^0.8.6",
+    "mppx": "^0.10.1",
     "viem": "^2.54.1",
     "ox": "^0.14.29"
   },
