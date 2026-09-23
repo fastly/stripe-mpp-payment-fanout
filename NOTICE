@@ -1,0 +1,10 @@
+Fastly Compute MPP Streaming Demo
+Copyright 2026 Fastly, Inc.
+
+This implementation is based on Cloudflare's mpp-proxy project:
+https://github.com/cloudflare/mpp-proxy
+
+Cloudflare's mpp-proxy project is licensed under the Apache License, Version 2.0.
+
+The implementation was substantially reworked with AI assistance for Fastly
+Compute, Fanout, Tempo payment sessions, and Stripe Shared Payment Tokens.

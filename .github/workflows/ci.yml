@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    runs-on: forge-amd64-small
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
